@@ -3,6 +3,9 @@ import sys
 import yaml
 from tornado.httpclient import AsyncHTTPClient
 
+from oauthenticator.google import GoogleOAuthenticator
+c.JupyterHub.authenticator_class = GoogleOAuthenticator
+
 def get_config(key, default=None):
     """
     Find a config item of a given name & return it
